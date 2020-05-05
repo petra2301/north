@@ -75,13 +75,22 @@ h2 {
 
 p {
     margin-bottom: 50px;
+    font-size: 1.1em;
 }
 
 .smallTitle, p, a, span {
     font-family: "Inter-Light-BETA";
     color: white;
     font-size: 1em;
-    max-width: 900px;
+}
+
+.smallTitle {
+    margin-bottom: 5px;
+}
+
+.centered {
+    text-align: center;
+    justify-content: center;
 }
 
 .buttonWithIcon {
@@ -107,14 +116,9 @@ p {
 }
 
 .bodyWrapper {
-    padding: 0 0 0 350px;
+    padding: 0 50px 0 350px;
 }
 
 .contentWrapper {
-    max-width: 1200px;
-}
-
-.rightAligned {
-    text-align: right;
-    margin: 0 0 0 auto;
+    width: 100%;
 }

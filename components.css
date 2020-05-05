@@ -1,14 +1,17 @@
 /* --- BANNER ON HOMEPAGE --- */
 
-.bigBg {
+.bgContainer {
     width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .topBg {
     max-width: 1200px;
+    margin: 0 auto;
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -33,6 +36,33 @@
     display: block;
 }
 
+
+/* --- CONTAINER WITH BIG IMAGE BG AND MINUS MARGIN --- */
+.bigBg {
+    margin: -150px 0;
+    min-height: 100vh;
+    height: auto;
+}
+
+.bigBgContent {
+    padding: 300px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    position: relative;
+}
+
+.bigBgWrapper1 {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+}
+
+.bigBgWrapper2 {
+    grid-row: 4;
+    grid-column: 2 / span 2;
+}
 /* --- CUSTOM CONTAINERS --- */
 
 .overlapLeft {
@@ -49,12 +79,105 @@
     grid-column: 1 / span 3;
     grid-row: 1 / span 3;
     object-fit: cover;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
+    opacity: .85;
+    z-index: 2;
 }
 
 .overlapLeft > div {
     grid-row: 2;
     grid-column: 3 / span 4;
+    z-index: 5;
+} 
+
+.overlapRight {
+    max-width: 1200px;
+    min-height: 600px;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+}
+
+.overlapRight > img {
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 3;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: .85;
+    z-index: 2;
+}
+
+.overlapRight > div {
+    grid-row: 2;
+    grid-column: 1 / span 4;
+    z-index: 5;
+} 
+
+
+/* --- photocollage --- */
+.photoCollage {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 225px);
+}
+
+.photoCollage > div {
+    overflow: hidden;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.photoCollage > div:nth-child(1) {
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 3;
+    overflow: hidden;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+.photoCollage > div:nth-child(2) {
+    grid-row: 1 / span 6;
+    grid-column: 5 / span 4;
+}
+
+.photoCollage > div:nth-child(3) {
+    grid-row: 2 / span 4;
+    grid-column: 1 / span 3;
+}
+
+.photoCollage > div:nth-child(4) {
+    grid-row: 5 / span 2;
+    grid-column: 2 / span 3;
+}
+
+.photoCollage > div > img {
+    object-fit: cover;
+}
+/* --- grids --- */
+
+.grid4col {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid4col > div > .fullImg {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+}
+
+.grid4col > div > * {
+    margin-top: 30px;
 }
