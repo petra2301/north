@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("inter/Inter-Bold.ttf");
+}
+@font-face {
+    font-family: "Inter-Light-Beta";
+    src: url("inter/Inter-Light-BETA.ttf");
+}
+
+body {
+    background-color: #202431;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: rgba(32, 36, 49, 0.5);
+}
+
+nav > a {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    font-family: "Inter-Light-Beta";
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: solid 5px transparent;
+    display: inline-block;
+    transition: .2s ease-in-out;
+    font-size: 1em;
+}
+
+nav > a:hover {
+    text-decoration: none;
+    border-bottom: solid 5px white;
+}
+
+#subMenu {
+    margin: 10px 0 15px 100px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+h1, h2, h3, h4, a, button, .smallTitle {
+    font-family: "Inter-Bold";
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 50px 0;
+}
+
+h1 {
+    font-size: 7em;
+}
+
+h2 {
+    font-size: 2.6em;
+}
+
+p {
+    margin-bottom: 50px;
+}
+
+.smallTitle, p, a, span {
+    font-family: "Inter-Light-BETA";
+    color: white;
+    font-size: 1em;
+    max-width: 900px;
+}
+
+.buttonWithIcon {
+    font-family: "Inter-Bold";
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.buttonWithIcon::after {
+    content: url(img/icons/Icon\ awesome-angle-right.png);
+    width: 20px;
+    height: 20px;
+    margin: 0 0 5px 15px;
+}
+
+.divider {
+    max-width: 500px;
+    height: 2px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 150px auto 150px auto;
+}
+
+.bodyWrapper {
+    padding: 0 0 0 350px;
+}
+
+.contentWrapper {
+    max-width: 1200px;
+}
+
+.rightAligned {
+    text-align: right;
+    margin: 0 0 0 auto;
+}
