@@ -59,6 +59,9 @@ h1, h2, h3, h4, a, button, .smallTitle {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
+    background: none;
+    outline: none;
+    border: none;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -78,7 +81,7 @@ p {
     font-size: 1.1em;
 }
 
-.smallTitle, p, a, span {
+.smallTitle, p, span {
     font-family: "Inter-Light-BETA";
     color: white;
     font-size: 1em;
@@ -94,6 +97,7 @@ p {
 }
 
 .buttonWithIcon {
+    font-size: 1.1em;
     font-family: "Inter-Bold";
     display: flex;
     align-items: center;
@@ -121,4 +125,87 @@ p {
 
 .contentWrapper {
     width: 100%;
+}
+
+/* --- FORMS --- */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+}
+
+input[name="message"] {
+    height: 170px;
+    width: 100%;
+}
+
+label {
+    font-family: "Inter-Light-BETA";
+    color: #202431;
+    position: absolute;
+    z-index: 5;
+    margin: 14px auto 0 10px;
+}
+
+.messageField {
+    grid-column: 1 / span 2;
+}
+
+/* --- FOOTER --- */
+footer {
+    max-width: 1200px;
+    margin: 150px auto;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer form {
+    grid-template-columns: 1fr;
+}
+
+footer input {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+footer label {
+    color: white;
+}
+
+footer a {
+    font-family: "Inter-Light-BETA";
+    margin: 0 0 20px 0;
+}
+
+footer .iconBox {
+    margin: 0;
+    padding: 15px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+.socialRow {
+    display: flex;
+    flex-direction: row;
+    max-width: 190px;
+    margin: 150px auto 50px auto;
+    justify-content: space-around;
 }
