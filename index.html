@@ -214,16 +214,19 @@
                         <h2>Message us:</h2>
                         <form>
                             <div>
+                            <input type="text" name="name" required placeholder="name">
                             <label for="name">Your name:</label>
-                            <input type="text" name="name">
+                            
                             </div>
                             <div>
+                                <input type="email" required placeholder="email">
                                 <label for="email">Your e-mail:</label>
-                                <input type="email">
+                                
                             </div>
                             <div class="messageField">
+                                <input type="text" name="message" required placeholder="message">
                                 <label for="message">Your message:</label>
-                                <input type="text" name="message">
+                                
                             </div>
                             <button class="buttonWithIcon" type="submit">Send message</button>
                         </form>
@@ -252,12 +255,12 @@
         <h4>newsletter</h4>
         <form>
             <div>
-                <label for="name">Your name</label>
                 <input type="text">
+                <label for="name">Your name</label>
             </div>
             <div>
-                <label for="email">Your email</label>
                 <input type="email">
+                <label for="email">Your email</label>
             </div>
             <button type="submit" class="buttonWithIcon" >Sign up</button>
         </form>
@@ -284,5 +287,14 @@
     <img src="img/icons/twitter.png" alt="twitter" width="30">
 </div>
 </div>
+<script>
+    let input = document.querySelectorAll("input");
+
+    input.onblur = function() {
+      if (input.value != "") { 
+        input.classList.add('filledInput');
+      }
+    };
+    </script>
 </body>
 </html>

@@ -148,6 +148,8 @@ input {
     width: 100%;
     border: none;
     outline: none;
+    position: relative;
+    padding: 10px;
 }
 
 input[name="message"] {
@@ -158,13 +160,44 @@ input[name="message"] {
 label {
     font-family: "Inter-Light-BETA";
     color: #202431;
-    position: absolute;
     z-index: 5;
-    margin: 14px auto 0 10px;
+    margin-top: 14px;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
 }
 
 .messageField {
     grid-column: 1 / span 2;
+}
+
+form > div {
+    position: relative;
+  }
+
+input:focus + label {
+    animation-fill-mode: forwards;
+    animation: shrinkLabel .3s ease-in-out forwards;
+  }
+  
+  @keyframes shrinkLabel {
+      100% {
+          margin-top: -15px;
+          font-size: 10px;
+          color: white;
+      }
+  }
+
+input::placeholder {
+    color: transparent;
+}
+
+input:not(:placeholder-shown) + label {
+    margin-top: -15px;
+    font-size: 10px;
+    color: white;
 }
 
 /* --- FOOTER --- */
