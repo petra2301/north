@@ -1,18 +1,17 @@
-const mobileMenu = document.querySelector("#mobileMenu");
+const openMobileMenu = document.querySelector("#openMobileMenu");
+const closeMobileMenu = document.querySelector("#closeMobileMenu");
 const menu = document.querySelector(".menu");
 
-mobileMenu.addEventListener("click", openNav);
+openMobileMenu.addEventListener("click", openMenu);
 
-function openNav() {
+function openMenu() {
     menu.style.padding = "20px 20px 0 20px";
     menu.style.width = "300px";
   }
 
-  const closeMobileMenu = document.querySelector("#closeMobileMenu");
+closeMobileMenu.addEventListener("click", closeMenu);
 
-  closeMobileMenu.addEventListener("click", closeNav);
-
-function closeNav() {
+function closeMenu() {
     menu.style.width = "0";
     menu.style.padding = "0";
   }
