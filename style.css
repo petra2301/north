@@ -26,7 +26,7 @@ body {
     background: rgba(32, 36, 49, 0.5);
 }
 
-#mobileMenu {
+#mobileMenu, #closeMobileMenu {
     display: none;
 }
 
