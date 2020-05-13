@@ -26,9 +26,6 @@ body {
     background: rgba(32, 36, 49, 0.5);
 }
 
-#mobileMenu, #closeMobileMenu {
-    display: none;
-}
 
 nav > a {
     margin-top: 30px;
@@ -56,6 +53,13 @@ nav > a:hover {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.mobileMenu {
+    display: none;
+}
+
+#openMobileMenu, #closeMobileMenu {
+    cursor: pointer;
+}
 
 h1, h2, h3, h4, a, button, .smallTitle {
     font-family: "Inter-Bold";
@@ -68,8 +72,12 @@ h1, h2, h3, h4, a, button, .smallTitle {
     border: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2  {
     margin: 0 0 50px 0;
+}
+
+h3, h4 {
+    margin: 0 0 25px 0;
 }
 
 h1 {

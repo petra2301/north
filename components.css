@@ -208,6 +208,7 @@
     margin-top: 30px;
 }
 
+
 /* --- MEDIA QUERIES --- */
 @media all and (max-width: 1420px) {
     .overlapLeft, .overlapRight, .grid4col, .photoCollage, .bigBgContent, footer { 
@@ -312,19 +313,23 @@
         padding: 300px 20px;
     }
 
+    #openMobileMenu, #closeMobileMenu {
+        display: block;
+    }
+
     .menu {
         background-color: #202431;
         align-items: center;
-        z-index: 85;
         transition: .3s ease-in-out;
         height: 100vh;
+        z-index: 10;
         width: 0;
         position: fixed;
-        z-index: 10;
         top: 0;
         left: 0;
         overflow-x: hidden;
     }
+
 
     #closeMobileMenu {
         position: absolute;
@@ -334,10 +339,9 @@
         display: block;
       }
 
-    #openMobileMenu {
-        display: block;
-        cursor: pointer;
-    }
+.onlyMobile {
+    display: block;
+}
 
     #mobileMenuWrapper {      
         background-color: #202431;

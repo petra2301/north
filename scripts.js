@@ -15,3 +15,6 @@ function closeMenu() {
     menu.style.width = "0";
     menu.style.padding = "0";
   }
+
+
+  
