@@ -83,9 +83,9 @@
         <h2 class="centered">Choose a country:</h2>
             <div class="dropdownWrapper">
                 <label class="centered" for="countrySelect" >First, choose the country you're visiting.<br>
-                Don't worry, you can always add other countries to your bucketlist later.</label>
+                Don't worry, you can always add other countries to your bucketlist later.</label><br>
             <select name="country" id="countrySelect">
-                <option value="">Choose a country</option>
+                <option value=""   hidden>Choose a country</option>
                 <option value="denmark">Denmark</option>
                 <option value="faroeislands">Faroe Islands</option>
                 <option value="finland">Finland</option>
@@ -94,7 +94,125 @@
                 <option value="scotland">Scotland</option>
                 <option value="sweden">Sweden</option>
             </select>
+            <button class="greenBtn buttonWithIcon">Let's go <i class="fas fa-angle-right"></i></button>
             </div>
+            <div id="popular">
+                <h2 class="centered">Most popular places in <span id="selectedCountry">Norway</span></h2>
+                <p class="centered">Choose from the most popular places in that country, or scroll down for activities.</p>
+                <div class="itemWrapper" id="popularItems">
+                    <div class="item">
+                        <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                        <img src="img/trolltunga.png" alt="Trolltunga">
+                        <h3>Trolltunga</h3>
+                        <p>Hiking, summer, camping</p>
+                        <button class="greenBtn">Read more</button>
+                    </div>
+                    <div class="item">
+                        <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                        <img src="img/trolltunga.png" alt="Trolltunga">
+                        <h3>Trolltunga</h3>
+                        <p>Hiking, summer, camping</p>
+                        <button class="greenBtn">Read more</button>
+                    </div>
+                    <div class="item">
+                        <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                        <img src="img/trolltunga.png" alt="Trolltunga">
+                        <h3>Trolltunga</h3>
+                        <p>Hiking, summer, camping</p>
+                        <button class="greenBtn">Read more</button>
+                    </div>
+                    <div class="item">
+                        <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                        <img src="img/trolltunga.png" alt="Trolltunga">
+                        <h3>Trolltunga</h3>
+                        <p>Hiking, summer, camping</p>
+                        <button class="greenBtn">Read more</button>
+                    </div>
+                    <div class="item">
+                        <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                        <img src="img/trolltunga.png" alt="Trolltunga">
+                        <h3>Trolltunga</h3>
+                        <p>Hiking, summer, camping</p>
+                        <button class="greenBtn">Read more</button>
+                    </div>
+                    <div class="item">
+                        <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                        <img src="img/trolltunga.png" alt="Trolltunga">
+                        <h3>Trolltunga</h3>
+                        <p>Hiking, summer, camping</p>
+                        <button class="greenBtn">Read more</button>
+                    </div>
+                    <div class="item">
+                        <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                        <img src="img/trolltunga.png" alt="Trolltunga">
+                        <h3>Trolltunga</h3>
+                        <p>Hiking, summer, camping</p>
+                        <button class="greenBtn">Read more</button>
+                    </div>
+                    <div class="item">
+                        <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                        <img src="img/trolltunga.png" alt="Trolltunga">
+                        <h3>Trolltunga</h3>
+                        <p>Hiking, summer, camping</p>
+                        <button class="greenBtn">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div id="activities">
+                <h2 class="centered">Choose an activity</h2>
+                <p class="centered">Choose something you want to do or see, and we will suggest all the right places for it:</p>
+                <div class="itemWrapper">
+                    <button class="activityBtn"><i class="fas fa-hiking"></i>Hiking</button>
+                    <button class="activityBtn"><i class="fas fa-car"></i>Roadtrip</button>
+                    <button class="activityBtn"><i class="fas fa-users"></i>Family friendly</button>
+                    <button class="activityBtn"><i class="fas fa-city"></i>City</button>
+                    <button class="activityBtn"><i class="fas fa-utensils"></i>For foodies</button>
+                    <button class="activityBtn"><i class="fas fa-campground"></i>Camping</button>
+                    <button class="activityBtn"><i class="fas fa-star"></i>Northern lights</button>
+                    <button class="activityBtn"><i class="fas fa-umbrella-beach"></i>Beaches & bathing</button>
+                    <button class="activityBtn"><i class="fas fa-mountain"></i>Landmark</button>
+                    <button class="activityBtn"><i class="fas fa-fish"></i>Animals</button>
+                    <button class="activityBtn"><i class="fas fa-sun"></i>Only summer trips</button>
+                    <button class="activityBtn"><i class="fas fa-snowflake"></i>Only winter trips</button>
+                </div>
+            </div>
+            <div id="suggestions">
+            <h2 class="centered">Our suggestions for hiking:</h2>
+            <div class="itemWrapper" id="hiking">
+                <div class="item">
+                    <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                    <img src="img/trolltunga.png" alt="Trolltunga">
+                    <h3>Trolltunga</h3>
+                    <p>Hiking, summer, camping</p>
+                    <button class="greenBtn">Read more</button>
+                </div>
+                <div class="item">
+                    <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                    <img src="img/trolltunga.png" alt="Trolltunga">
+                    <h3>Trolltunga</h3>
+                    <p>Hiking, summer, camping</p>
+                    <button class="greenBtn">Read more</button>
+                </div>
+                <div class="item">
+                    <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                    <img src="img/trolltunga.png" alt="Trolltunga">
+                    <h3>Trolltunga</h3>
+                    <p>Hiking, summer, camping</p>
+                    <button class="greenBtn">Read more</button>
+                </div>
+                <div class="item">
+                    <button class="addToListBtn"><i class="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                    <img src="img/trolltunga.png" alt="Trolltunga">
+                    <h3>Trolltunga</h3>
+                    <p>Hiking, summer, camping</p>
+                    <button class="greenBtn">Read more</button>
+                </div>
+            </div>
+        </div>
+        <h2 class="centered">Still can't find the right place? :(</h2>
+        <p class="centered">We have put together some roadtrip ideas on our trips page. Check them out for inspiration:</p>
+        <button class="buttonWithIcon greenBtn">See roadtrip ideas<i class="fas fa-angle-right"></i></button>
+            <!-- end of appWrapper-->
     </div>
     <script src="scripts.js"></script>
 </body>

@@ -112,6 +112,11 @@ p {
     /* stays centered even on mobile */
     text-align: center;
 }
+
+button {
+    cursor: pointer;
+}
+
 .buttonWithIcon {
     font-size: 1.1em;
     font-family: "Inter-Bold";
@@ -120,11 +125,22 @@ p {
     cursor: pointer;
 }
 
-.buttonWithIcon::after {
-    content: url(img/icons/Icon\ awesome-angle-right.png);
-    width: 20px;
-    height: 20px;
-    margin: 0 0 5px 15px;
+.greenBtn {
+    background-color: #3C957A;
+    height: 55px;
+    width: 315px;
+    text-align: center;
+    margin: 50px auto;
+    justify-content: center;
+    transition: .3s ease-in-out;
+}
+
+.greenBtn:hover {
+    background-color: #5bbd9f;
+}
+.fa-angle-right {
+    margin: 0 0 0 15px;
+    font-size: 2em;
 }
 
 .divider {
@@ -165,8 +181,11 @@ input[name="message"] {
     width: 100%;
 }
 
-form > label {
+label {
     font-family: "Inter-Light-BETA";
+}
+
+form > label {
     color: #202431;
     z-index: 5;
     margin-top: 14px;
