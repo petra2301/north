@@ -73,10 +73,41 @@
     font-family: "Inter-Light-BETA";
 }
 
-.bucketlistWrapper > .listItem:nth-child(2n){
+.bucketlistWrapper > .listItem:nth-child(2n+1){
     background-color: #666971;
 }
 /* ---- APP STUFF --- */
-.appWrapper {
-    padding: 0 30px 0 350px;
+
+.appWrapper, .appHero {
+    padding: 0 30px 0 26%;
+    width: 100%;
+}
+
+.appWrapper > h2:nth-child(1) {
+    margin-top: 150px;
+}
+
+.appHero {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("img/app-banner.png");
+    background-size: cover;
+}
+
+.appHero > h1 {
+    font-size: 4.5em;
+}
+
+.dropdownWrapper {
+    max-width: 900px;
+    margin: 50px auto;
+    position: relative;
+}
+
+@media all and (max-width: 1150px) {
+    .appWrapper, .appHero {
+        padding: 0 30px 0 350px;
+    }
 }

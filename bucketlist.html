@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Journey North | Home</title>
+    <title>Your Journey North | Bucketlist</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="banners.css">
     <link rel="stylesheet" href="components.css">
@@ -17,13 +17,13 @@
         <nav>
             <a href="index.html">Home</a><br>
             <a href="countries.html">Countries</a><br>
-            <a href="denmark.html" id="subMenu">Denmark</a><br>
-            <a href="faroeislands.html" id="subMenu">Faroe islands</a><br>
-            <a href="finland.html" id="subMenu">Finland</a><br>
-            <a href="iceland.html" id="subMenu">Iceland</a><br>
-            <a href="norway.html" id="subMenu">Norway</a><br>
-            <a href="scotland.html" id="subMenu">Scotland</a><br>
-            <a href="sweden.html" id="subMenu">Sweden</a><br>
+            <a href="denmark.html" class="subMenu">Denmark</a><br>
+            <a href="faroeislands.html" class="subMenu">Faroe islands</a><br>
+            <a href="finland.html" class="subMenu">Finland</a><br>
+            <a href="iceland.html" class="subMenu">Iceland</a><br>
+            <a href="norway.html" class="subMenu">Norway</a><br>
+            <a href="scotland.html" class="subMenu">Scotland</a><br>
+            <a href="sweden.html" class="subMenu">Sweden</a><br>
             <a href="accomodation.html">Accomodation</a><br>
             <a href="trips.html">Trips</a><br>
             <a href="contact.html">Contact</a><br>
@@ -60,9 +60,41 @@
             </div>
             <i class="fas fa-trash-alt"></i>
         </div>
+        <div class="listItem">
+            <img src="img/trolltunga.png" alt="">
+            <div><h4>Place name</h4>
+            <a href="#">Read more</a>
+            </div>
+            <i class="fas fa-trash-alt"></i>
+        </div>
+        <div class="listItem">
+            <img src="img/trolltunga.png" alt="">
+            <div><h4>Place name</h4>
+            <a href="#">Read more</a>
+            </div>
+            <i class="fas fa-trash-alt"></i>
+        </div>
         
     </div>
+    <div class="appHero">
+            <h1>Create your own bucketlist</h1>
+    </div>
     <div class="appWrapper">
+        <h2 class="centered">Choose a country:</h2>
+            <div class="dropdownWrapper">
+                <label class="centered" for="countrySelect" >First, choose the country you're visiting.<br>
+                Don't worry, you can always add other countries to your bucketlist later.</label>
+            <select name="country" id="countrySelect">
+                <option value="">Choose a country</option>
+                <option value="denmark">Denmark</option>
+                <option value="faroeislands">Faroe Islands</option>
+                <option value="finland">Finland</option>
+                <option value="iceland">Iceland</option>
+                <option value="norway">Norway</option>
+                <option value="scotland">Scotland</option>
+                <option value="sweden">Sweden</option>
+            </select>
+            </div>
     </div>
     <script src="scripts.js"></script>
 </body>

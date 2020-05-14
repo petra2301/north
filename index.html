@@ -19,13 +19,13 @@
             <nav>
                 <a href="index.html">Home</a><br>
                 <a href="countries.html">Countries</a><br>
-                <a href="denmark.html" id="subMenu">Denmark</a><br>
-                <a href="faroeislands.html" id="subMenu">Faroe islands</a><br>
-                <a href="finland.html" id="subMenu">Finland</a><br>
-                <a href="iceland.html" id="subMenu">Iceland</a><br>
-                <a href="norway.html" id="subMenu">Norway</a><br>
-                <a href="scotland.html" id="subMenu">Scotland</a><br>
-                <a href="sweden.html" id="subMenu">Sweden</a><br>
+                <a href="denmark.html" class="subMenu">Denmark</a><br>
+                <a href="faroeislands.html" class="subMenu">Faroe islands</a><br>
+                <a href="finland.html" class="subMenu">Finland</a><br>
+                <a href="iceland.html" class="subMenu">Iceland</a><br>
+                <a href="norway.html" class="subMenu">Norway</a><br>
+                <a href="scotland.html" class="subMenu">Scotland</a><br>
+                <a href="sweden.html" class="subMenu">Sweden</a><br>
                 <a href="accomodation.html">Accomodation</a><br>
                 <a href="trips.html">Trips</a><br>
                 <a href="contact.html">Contact</a><br>
@@ -41,21 +41,21 @@
                     <h1>North</h1>
                 </div>
                 <div class="hideOnMobile iconBox">
-                    <img src="img/icons/boots.png" height="50">
+                    <img src="img/icons/boots.png" alt="hiking" height="50">
                     <div>
                         <span>Be it challenging rock climbing or a "family friendly" trip with beautiful sights - we know just the right place</span>
                         <a class="buttonWithIcon">See places</a>
                     </div>
                 </div>   
                 <div class="hideOnMobile iconBox">
-                    <img src="img/icons/hotel.png" height="50">
+                    <img src="img/icons/hotel.png" alt="accomodation" height="50">
                     <div>
                         <span>Find and book accommodation easily, and enjoy your time off at one of our many certified partners</span>
                         <a class="buttonWithIcon">Find accomodation</a>
                     </div>
                 </div>    
                 <div class="iconBox">
-                    <img src="img/icons/telephone.png" height="50">
+                    <img src="img/icons/telephone.png" alt="mobile app" height="50">
                     <div>
                         <span>Create your own bucket list and plan your holiday in an easy and stress-free way</span>
                         <a class="buttonWithIcon">Try it now</a>
@@ -136,14 +136,13 @@
                     <a href="#" class="buttonWithIcon">Find accomodation</a>
                 </div>
                 <div class="bigBgWrapper2Right">
-                    <img src="img/video1.png" alt="Video 1" width="350px">
+                    <img src="img/video1.png" alt="Video 1" width="350">
                     <img src="img/video2.png" alt="Video 2" width="350">
                 </div>
             </div>
         </div>
     </div>
     </div>
-</div>
 <div class="bodyWrapper">
     <div class="contentWrapper">
         <p class="smallTitle centeredForced">What to do?</p>
@@ -176,7 +175,7 @@
         </div>
 <div class="photoCollage">
     <div>
-        <img src="img/food1.jpg">
+        <img src="img/food1.jpg" alt="try local specialties">
     </div>
     <div>
         <p class="smallTitle">Food & drink</p>
@@ -186,10 +185,10 @@
         <a href="#" class="buttonWithIcon">See offers</a>
     </div>
     <div>
-        <img src="img/food2.jpg">
+        <img src="img/food2.jpg" alt="try local specialties">
     </div>
     <div>
-        <img src="img/food3.jpg">
+        <img src="img/food3.jpg" alt="try local specialties">
     </div>
 </div>
 </div>
@@ -219,16 +218,16 @@
                         <h2>Message us:</h2>
                         <form>
                             <div>
-                            <input type="text" name="name" required placeholder="name">
+                            <input type="text" name="name" required placeholder="name" id="name">
                             <label for="name">Your name:</label>
                             </div>
                             <div>
-                                <input type="email" required placeholder="email">
+                                <input type="email" required placeholder="email" id="email">
                                 <label for="email">Your e-mail:</label>   
                             </div>
                             <div class="messageField">
-                                <input type="text" name="message" required placeholder="message">
-                                <label for="message">Your message:</label>
+                                <input type="text" name="message" id="message" required placeholder="message">
+                                <label for="message" >Your message:</label>
                             </div>
                             <button class="buttonWithIcon" type="submit">Send message</button>
                         </form>
@@ -257,12 +256,12 @@
         <h4>newsletter</h4>
         <form>
             <div>
-                <input type="text">
-                <label for="name">Your name</label>
+                <input type="text" id="nameNewsletter">
+                <label for="nameNewsletter">Your name</label>
             </div>
             <div>
-                <input type="email">
-                <label for="email">Your email</label>
+                <input type="email" id="emailNewsletter">
+                <label for="emailNewsletter">Your email</label>
             </div>
             <button type="submit" class="buttonWithIcon" >Sign up</button>
         </form>

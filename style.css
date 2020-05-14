@@ -48,7 +48,7 @@ nav > a:hover {
     border-bottom: solid 5px white;
 }
 
-#subMenu {
+.subMenu {
     margin: 10px 0 15px 100px;
     color: rgba(255, 255, 255, 0.5);
 }
@@ -165,7 +165,7 @@ input[name="message"] {
     width: 100%;
 }
 
-label {
+form > label {
     font-family: "Inter-Light-BETA";
     color: #202431;
     z-index: 5;
