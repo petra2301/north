@@ -115,6 +115,7 @@ p {
 
 button {
     cursor: pointer;
+    transition: .3s ease-in-out;
 }
 
 .buttonWithIcon {
@@ -128,11 +129,11 @@ button {
 .greenBtn {
     background-color: #3C957A;
     height: 55px;
-    width: 315px;
     text-align: center;
     margin: 50px auto;
     justify-content: center;
     transition: .3s ease-in-out;
+    padding: 0 50px;
 }
 
 .greenBtn:hover {

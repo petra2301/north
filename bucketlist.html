@@ -30,8 +30,8 @@
             <a href="about.html">About us</a><br>
         </nav>
     </div>
-    <div class="bucketlistWrapper">
-        <h3>Your bucketlist</h3>
+    <div class="bucketlistWrapper closeBucketlist">
+        <h3 id="bucketlistTitle">Your bucketlist<i id="arrow" class="fas fa-angle-down onlyMobile"></i></h3>
         <div class="listItem">
             <img src="img/trolltunga.png" alt="">
             <div><h4>Place name</h4>
@@ -77,7 +77,7 @@
         
     </div>
     <div class="appHero">
-            <h1>Create your own bucketlist</h1>
+            <h1 class="centeredForced">Create your own bucketlist</h1>
     </div>
     <div class="appWrapper">
         <h2 class="centered">Choose a country:</h2>
@@ -210,10 +210,11 @@
             </div>
         </div>
         <h2 class="centered">Still can't find the right place? :(</h2>
-        <p class="centered">We have put together some roadtrip ideas on our trips page. Check them out for inspiration:</p>
+        <p class="centered">We have put together some roadtrip ideas on our <a href="trips.html">trips</a> page. Check them out for inspiration:</p>
         <button class="buttonWithIcon greenBtn">See roadtrip ideas<i class="fas fa-angle-right"></i></button>
             <!-- end of appWrapper-->
     </div>
     <script src="scripts.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

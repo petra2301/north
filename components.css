@@ -1,3 +1,13 @@
+/* --- colors --- */
+:root {
+    --blue:#202431;
+    --green: #3C957A;
+    --lightgreen: #5bbd9f;
+    --red: #FF6A6A;
+    --blueLifted: #40434E;
+    --blueLiftedLight: #666971;
+  }
+
 /* --- BANNER ON HOMEPAGE --- */
 
 .bgContainer {
