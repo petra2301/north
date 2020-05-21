@@ -116,6 +116,7 @@ p {
 button {
     cursor: pointer;
     transition: .3s ease-in-out;
+    font-size: 1em;
 }
 
 .buttonWithIcon {
@@ -136,6 +137,11 @@ button {
     padding: 0 50px;
 }
 
+a.greenBtn {
+    padding: 18px 50px;
+    display: inline-block;
+}
+
 .greenBtn:hover {
     background-color: #5bbd9f;
 }
@@ -150,6 +156,17 @@ button {
     display: block;
     background-color: rgba(255, 255, 255, 0.5);
     margin: 150px auto 150px auto;
+}
+
+.topMargin {
+    margin-top: 150px;
+}
+
+.P-width900 {
+    max-width: 900px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .bodyWrapper {
@@ -186,7 +203,7 @@ label {
     font-family: "Inter-Light-BETA";
 }
 
-form > label {
+form > div > label {
     color: #202431;
     z-index: 5;
     margin-top: 14px;
@@ -196,6 +213,7 @@ form > label {
     left: 0;
     pointer-events: none;
 }
+
 
 .messageField {
     grid-column: 1 / span 2;
@@ -237,6 +255,10 @@ footer {
     grid-template-columns: repeat(4, 1fr);
 }
 
+.overlappingFooter {
+    margin-top: -300px;
+}
+
 footer > div {
     display: flex;
     flex-direction: column;
@@ -249,9 +271,18 @@ footer form {
 footer input {
     border: 1px solid white;
     background-color: rgba(255, 255, 255, 0.05);
+    color: white;
 }
 
 footer label {
+    color: white;
+}
+
+.footerForm > div > label {
+    color: white;
+}
+
+.footerForm > div > label {
     color: white;
 }
 

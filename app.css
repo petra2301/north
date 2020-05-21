@@ -64,7 +64,7 @@
     cursor: pointer;
 }
 
-.listItem > div > h4, p, a {
+.listItem > div > h4, p {
     text-transform: none;
 }
 
@@ -178,6 +178,7 @@
 
 .item > .greenBtn {
     margin: 0;
+    display: inline-block;
 }
 
 .activityBtn {

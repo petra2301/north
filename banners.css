@@ -26,14 +26,54 @@
     background-image: url(img/homebanner.jpg);
 }
 
+#aboutbanner {
+    background-image: url(img/about.jpg);
+}
+
 #auroraborealis {
     background-image: url(img/auroraborealis.jpg);
 }
 
-#contact {
+#contact, #contactbanner {
     background-image: url(img/contact.JPG);
 }
 
 #tripsbanner {
     background-image: url(img/premadetrips.jpg);
+}
+
+#denmarkbanner {
+    background-image: url(img/denmark.jpg);
+}
+
+#faroebanner {
+    background-image: url(img/faroeislands.jpg);
+}
+
+#finlandbanner {
+    background-image: url(img/finland.jpg);
+}
+
+#greenlandbanner {
+    background-image: url(img/greenland.jpg);
+}
+
+#icelandbanner {
+    background-image: url(img/iceland.jpg);
+}
+
+#norwaybanner {
+    background-image: url(img/norway.jpg);
+}
+
+#scotlandbanner {
+    background-image: url(img/scotland.jpg);
+}
+
+#swedenbanner {
+    background-image: url(img/sweden.jpg);
+}
+
+#countriesbanner {
+    background-image: url(img/countries1.jpg);
 }
