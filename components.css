@@ -402,9 +402,9 @@ margin: 0;
         display: block;
       }
 
-.onlyMobile {
-    display: block;
-}
+    .onlyMobile {
+        display: block;
+    }
 
     #mobileMenuWrapper {      
         background-color: #202431;
@@ -424,7 +424,7 @@ margin: 0;
         margin: 0 auto 0 80px;
     }
 
-    #subMenu {
+    .subMenu {
         margin: 0 auto 0 100px;
     }
 }
@@ -502,8 +502,24 @@ margin: 0;
         display: none!important;
     }
 
-    .topBg .iconBox {
+    .topBg {
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .topBg > .iconBox {
         grid-column: 1 / span 3;
+    }
+
+    .topBg > .iconBox:nth-child(2) {
+        grid-row: 3;
+    }
+    
+    .topBg > .iconBox:nth-child(3) {
+        grid-row: 4;
+    }
+
+    .topBg > .iconBox:nth-child(4) {
+        grid-row: 5;
     }
 
     .overlapLeft, .overlapRight {
