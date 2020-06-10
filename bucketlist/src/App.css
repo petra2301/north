@@ -471,12 +471,17 @@ footer .iconBox {
   display: flex;
   align-items: center;
   text-transform: none;
+  padding: 5px 10px;
 }
 
 .addToListBtn > .fas {
   color: #3C957A;
   font-size: 1.5em;
   margin: 0 15px 0 0;
+}
+
+.addToListBtn:hover {
+  background-color: #bbd8cf;
 }
 
 .item > img {
@@ -499,6 +504,7 @@ footer .iconBox {
 .item > .greenBtn {
   margin: 0;
   display: inline-block;
+  padding: 17px 30px;
 }
 
 .activityBtn {
@@ -513,13 +519,25 @@ footer .iconBox {
   align-items: center;
 }
 
-.activityBtn:hover {
+.activityBtn:hover, .placeBtn:hover {
   background-color: var(--lightgreen);
 }
 
 .activityBtn > .fas {
   font-size: 2em;
   margin: 0 15px 0 0;
+}
+
+.placeBtn {
+  height: 75px;
+  width: 100%;
+  background: white;
+  color: #202431;
+  font-size: 1em;
+  padding: 0 0 0 20px;
+  text-align: left;
+  display: flex;
+  align-items: center;
 }
 
 @media all and (max-width: 1305px) {

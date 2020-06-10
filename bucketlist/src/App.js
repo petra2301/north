@@ -6,9 +6,10 @@ import './Customelements.css';
 
 import Apphero from './components/Apphero';
 import NavbarApp from './components/NavbarApp';
+import Norway from './components/Norway';
 
 class App extends Component {
-  
+
     render() {
   return (
     <div>
@@ -69,8 +70,7 @@ class App extends Component {
                 <button className="greenBtn buttonWithIcon" id="countrySelected">Let's go <i className="fas fa-angle-right" aria-hidden="true"></i></button>     
         </div>
         <div id="popular">
-          {//TO-DO: fetch popular places from the input country
-          }
+          <Norway />
         </div>
         <div id="activities">
           <h2 className="centered">Choose an activity</h2>
