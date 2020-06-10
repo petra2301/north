@@ -1,0 +1,319 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Inter-Bold";
+    src: url("inter/Inter-Bold.ttf");
+}
+@font-face {
+    font-family: "Inter-Light-Beta";
+    src: url("inter/Inter-Light-BETA.ttf");
+}
+
+/* --- colors --- */
+:root {
+    --blue:#202431;
+    --green: #3C957A;
+    --lightgreen: #5bbd9f;
+    --red: #FF6A6A;
+    --blueLifted: #40434E;
+    --blueLiftedLight: #666971;
+  }
+  
+body {
+    background-color: #202431;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100vh;
+    background: rgba(32, 36, 49, 0.5);
+}
+
+
+nav > a {
+    margin-top: 30px;
+    margin-right: auto;
+    margin-bottom: 20px;
+    margin-left: 80px;
+    font-family: "Inter-Light-Beta";
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    border-bottom: solid 5px transparent;
+    display: inline-block;
+    transition: .2s ease-in-out;
+    font-size: 1em;
+}
+
+nav > a:hover {
+    text-decoration: none;
+    border-bottom: solid 5px white;
+}
+
+.subMenu {
+    margin: 10px 0 15px 100px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.mobileMenu {
+    display: none;
+    cursor: pointer;
+}
+
+#openMobileMenu, #closeMobileMenu {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, a, button, .smallTitle {
+    font-family: "Inter-Bold";
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+h1, h2  {
+    margin: 0 0 50px 0;
+}
+
+h3, h4 {
+    margin: 0 0 25px 0;
+}
+
+h1 {
+    font-size: 7em;
+}
+
+h2 {
+    font-size: 2.6em;
+}
+
+p {
+    margin-bottom: 50px;
+    font-size: 1.1em;
+}
+
+.smallTitle, p, span {
+    font-family: "Inter-Light-BETA";
+    color: white;
+    font-size: 1em;
+}
+
+.smallTitle {
+    margin-bottom: 5px;
+}
+
+.centered {
+    text-align: center;
+    justify-content: center;
+}
+
+.centeredForced {
+    /* stays centered even on mobile */
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+    transition: .3s ease-in-out;
+    font-size: 1em;
+}
+
+.buttonWithIcon {
+    font-size: 1.1em;
+    font-family: "Inter-Bold";
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.greenBtn {
+    background-color: #3C957A;
+    height: 55px;
+    text-align: center;
+    margin: 50px auto;
+    justify-content: center;
+    transition: .3s ease-in-out;
+    padding: 0 50px;
+}
+
+a.greenBtn {
+    padding: 18px 50px;
+    display: inline-block;
+}
+
+.greenBtn:hover {
+    background-color: #5bbd9f;
+}
+.fa-angle-right {
+    margin: 0 0 0 15px;
+    font-size: 2em;
+}
+
+.divider {
+    max-width: 500px;
+    height: 2px;
+    display: block;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 150px auto 150px auto;
+}
+
+.topMargin {
+    margin-top: 150px;
+}
+
+.P-width900 {
+    max-width: 900px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bodyWrapper {
+    padding: 0 30px 0 350px;
+}
+
+.contentWrapper {
+    width: 100%;
+}
+
+/* --- FORMS --- */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+}
+
+input {
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 45px;
+    width: 100%;
+    border: none;
+    outline: none;
+    position: relative;
+    padding: 10px;
+}
+
+input[name="message"] {
+    height: 170px;
+    width: 100%;
+}
+
+label {
+    font-family: "Inter-Light-BETA";
+}
+
+form > div > label {
+    color: #202431;
+    z-index: 5;
+    margin-top: 14px;
+    margin-left: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+
+.messageField {
+    grid-column: 1 / span 2;
+}
+
+form > div {
+    position: relative;
+  }
+
+input:focus + label {
+    animation-fill-mode: forwards;
+    animation: shrinkLabel .3s ease-in-out forwards;
+  }
+  
+  @keyframes shrinkLabel {
+      100% {
+          margin-top: -15px;
+          font-size: 10px;
+          color: white;
+      }
+  }
+
+input::placeholder {
+    color: transparent;
+}
+
+input:not(:placeholder-shown) + label {
+    margin-top: -15px;
+    font-size: 10px;
+    color: white;
+}
+
+/* --- FOOTER --- */
+footer {
+    max-width: 1200px;
+    margin: 150px auto;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.overlappingFooter {
+    margin-top: -300px;
+}
+
+footer > div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer form {
+    grid-template-columns: 1fr;
+}
+
+footer input {
+    border: 1px solid white;
+    background-color: rgba(255, 255, 255, 0.05);
+    color: white;
+}
+
+footer label {
+    color: white;
+}
+
+.footerForm > div > label {
+    color: white;
+}
+
+.footerForm > div > label {
+    color: white;
+}
+
+footer a {
+    font-family: "Inter-Light-BETA";
+    margin: 0 0 20px 0;
+}
+
+footer .iconBox {
+    margin: 0;
+    padding: 15px 0;
+    grid-gap: 20px;
+    align-items: center;
+}
+
+.socialRow {
+    display: flex;
+    flex-direction: row;
+    max-width: 190px;
+    margin: 150px auto 50px auto;
+    justify-content: space-around;
+}
+

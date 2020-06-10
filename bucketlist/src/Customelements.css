@@ -1,0 +1,572 @@
+/* --- BANNER ON HOMEPAGE --- */
+
+.bgContainer {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.topBg {
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+}
+
+#homeTitle {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+}
+
+#subpageTitle {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    text-align: center;
+}
+
+#contactIcons > .iconBox {
+    display: flex;
+    align-items: center;
+} 
+
+#contactIcons > .iconBox > div > span {
+margin: 0;
+} 
+
+
+.iconBox {
+    grid-row: 4;
+    display: grid;
+    grid-gap: 30px;
+    padding: 20px;
+    grid-template-columns: 50px 1fr;
+}
+
+.iconBox > div > span {
+    display: block;
+    margin: 0 0 30px 0;
+}
+
+.iconBox img {
+    margin: 0 auto;
+}
+
+
+/* --- CONTAINER WITH BIG IMAGE BG AND MINUS MARGIN --- */
+.bigBg {
+    margin: -150px 0;
+    min-height: 100vh;
+    height: auto;
+}
+
+.bigBgContent > * > .iconBox p {
+    margin: 0;
+    padding: 0;
+}
+
+.bigBgContent > * > .iconBox {
+    margin: 25px 0;
+    padding: 0;
+}
+
+.bigBgContent {
+    padding: 300px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    position: relative;
+}
+
+.bigBgWrapper1 {
+    grid-row: 2;
+    grid-column: 1 / span 2;
+}
+
+.bigBgWrapper2Right {
+    grid-row: 4 / span 2;
+    grid-column: 2 / span 2;
+}
+
+.bigBgWrapper2Left {
+    grid-row: 3 / span 2;
+    grid-column: 1 / span 2;
+}
+
+/* --- CUSTOM CONTAINERS --- */
+
+.overlapLeft {
+    max-width: 1200px;
+    min-height: 600px;
+    margin: 150px auto;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+}
+
+.overlapLeft > img {
+    grid-column: 1 / span 3;
+    grid-row: 1 / span 3;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: .65;
+    z-index: 2;
+}
+
+.overlapLeft > div {
+    grid-row: 2;
+    grid-column: 3 / span 4;
+    z-index: 5;
+} 
+
+.overlapRight {
+    max-width: 1200px;
+    min-height: 600px;
+    margin: 150px auto;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+    grid-gap: 50px;
+}
+
+.overlapRight > img {
+    grid-column: 4 / span 3;
+    grid-row: 1 / span 3;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: .65;
+    z-index: 2;
+}
+
+.overlapRight > div {
+    grid-row: 2;
+    grid-column: 1 / span 4;
+    z-index: 5;
+} 
+
+
+/* --- photocollage --- */
+.photoCollage {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(6, 225px);
+    margin: 150px auto 0 auto;
+}
+
+.photoCollage > div {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.photoCollage > div:nth-child(1) {
+    grid-row: 1 / span 2;
+    grid-column: 2 / span 3;
+    z-index: 5;
+}
+
+.photoCollage > div:nth-child(2) {
+    grid-row: 1 / span 6;
+    grid-column: 6 / span 4;
+    display: grid;
+    align-content: center;
+}
+
+.photoCollage > div:nth-child(3) {
+    grid-row: 2 / span 4;
+    grid-column: 1 / span 3;
+}
+
+.photoCollage > div:nth-child(4) {
+    grid-row: 5 / span 2;
+    grid-column: 2 / span 3;
+}
+
+.photoCollage > div > img {
+    min-height: 100%;
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+}
+
+/* --- grids --- */
+
+.grid4col {
+    max-width: 1200px;
+    margin: 50px auto;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid4col > div > .fullImg {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+}
+
+.grid4col > div > .halfImg {
+    object-fit: cover;
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.grid4col > div > * {
+    margin-top: 30px;
+}
+
+
+.grid2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+}
+/*
+.grid2col > div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
+}*/
+
+.grid2col > div > img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    /*grid-row: 1 / span 2;
+    grid-column: 1;*/
+}
+
+.grid2col > div > * {
+    margin-top: 30px;
+}
+
+
+/* --- MEDIA QUERIES --- */
+@media all and (max-width: 1420px) {
+    .overlapLeft, .overlapRight, .grid4col, .photoCollage, .bigBgContent, footer { 
+    grid-gap: 30px;
+}
+
+    #homeTitle {
+        grid-row: 2;
+        grid-column: 1 / span 3;
+        text-align: center;
+    }
+
+    .topBg .iconBox {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .topBg .iconBox img {
+        margin: 0 auto 30px 0;
+    }
+
+    #contactIcons > .iconBox img {
+        margin: 0 auto 30px auto;
+    }
+
+    .overlapLeft > div {
+        grid-column: 4 / span 3;
+    }
+
+    .overlapRight > div {
+        grid-column: 1 / span 3;
+    }
+
+    .bigBgContent {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 1fr 150px;
+        align-items: center;
+        padding: 300px 50px 300px 0;
+    }
+
+    .bigBgWrapper1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    .bigBgWrapper2Right {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .photoCollage {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    .photoCollage > div:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1;
+    }
+    
+    .photoCollage > div:nth-child(2) {
+        grid-row: 1;
+        grid-column: 2;
+    }
+    
+    .photoCollage > div:nth-child(3) {
+        grid-row: 2;
+        grid-column: 1;
+    }
+    
+    .photoCollage > div:nth-child(4) {
+        grid-row: 2;
+        grid-column: 2;
+    }
+    
+    .photoCollage > div > img {
+        min-height: 100%;
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+    }
+}
+
+@media all and (max-width: 1300px) {
+    footer {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
+    footer > div {
+        margin-bottom: 50px;
+    }
+}
+
+@media all and (max-width: 1000px) {
+    .overlay, .overlayDark, .contentWrapper {
+        padding: 0;
+    }
+
+    .bodyWrapper {
+        padding: 0 20px;
+    }
+
+    .bigBgContent {
+        padding: 300px 20px;
+    }
+
+    #openMobileMenu, #closeMobileMenu {
+        display: block;
+    }
+
+    .menu {
+        background-color: #202431;
+        align-items: center;
+        transition: .3s ease-in-out;
+        height: 100vh;
+        z-index: 10;
+        width: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+    }
+
+
+    #closeMobileMenu {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        cursor: pointer;
+        display: block;
+      }
+
+    .onlyMobile {
+        display: block;
+    }
+
+    #mobileMenuWrapper {      
+        background-color: #202431;
+        height: 70px;
+        width: 100%;
+        padding: 20px;
+        display: flex;
+        z-index: 7;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 0 auto 0 80px;
+    }
+
+    .subMenu {
+        margin: 0 auto 0 100px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    h1 {
+        font-size: 3.75em;
+    }
+    
+    h2 {
+        font-size: 2em;
+    }
+    .bigBgContent {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bigBgContent div {
+        margin: 0 auto 150px auto;
+    }
+
+    .photoCollage {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+
+    .photoCollage > div:nth-child(1) {
+        grid-row: 1;
+        grid-column: 1 / span 2;
+    }
+    
+    .photoCollage > div:nth-child(2) {
+        grid-row: 2;
+        grid-column: 1 / span 2;
+    }
+    
+    .photoCollage > div:nth-child(3) {
+        grid-row: 3;
+        grid-column: 1;
+    }
+    
+    .photoCollage > div:nth-child(4) {
+        grid-row: 3;
+        grid-column: 2;
+    }
+    
+    .photoCollage > div > img {
+        min-height: 100%;
+        object-fit: cover;
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .bigBgWrapper2Left {
+        width: 100%;
+        padding: 0;
+    }
+
+    .bigBgWrapper2Left > form > div {
+        margin: 0;
+    }
+
+    .grid2col {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media all and (max-width: 600px) {
+    .centered {
+        text-align: left;
+    }
+
+    .hideOnMobile {
+        display: none!important;
+    }
+
+    .topBg {
+        grid-template-rows: repeat(5, 1fr);
+    }
+
+    .topBg > .iconBox {
+        grid-column: 1 / span 3;
+    }
+
+    .topBg > .iconBox:nth-child(2) {
+        grid-row: 3;
+    }
+    
+    .topBg > .iconBox:nth-child(3) {
+        grid-row: 4;
+    }
+
+    .topBg > .iconBox:nth-child(4) {
+        grid-row: 5;
+    }
+
+    .overlapLeft, .overlapRight {
+        grid-template-rows: 315px auto;
+        grid-template-columns: 1fr;
+    }
+
+    .overlapLeft > img, .overlapRight > img {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .overlapLeft > div, .overlapRight > div {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    footer {
+        margin-top: 50px;
+        grid-template-columns: 1fr;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .photoCollage {
+        grid-template-rows: 1fr 1fr 150px 150px
+    }
+
+    .photoCollage > div:nth-child(3) {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+
+    .photoCollage > div:nth-child(4) {
+        grid-column: 1 / span 2;
+        grid-row: 4;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .messageField {
+        grid-column: 1;
+    }
+    
+}
+/* --- MEDIA QUERIES FOR BASIC GRID ELEMENTS --- */
+@media all and (max-width: 1420px) {
+    .grid4col {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .grid4col {
+        grid-template-columns: 1fr;
+    }
+}
