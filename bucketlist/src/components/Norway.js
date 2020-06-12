@@ -33,18 +33,25 @@ componentDidMount() {
 
     render() {
         const { error, isLoaded, items } = this.state;
+
         if (error) {
           return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
           return <div><p className="centered">Loading...</p></div>;
         }
         else {
-        //if (this.state.item.popular === "yes" ){*/
+          //if {(this.state.items[i].gsx$popular.$t === "yes" ){
+          //console.log(this.state.items[0].gsx$popular.$t);
+          //console.log(this.state.items);
+
+          //this state items forEach --> check if popular is yes --> if yes --> return
+          //this.state.items.forEach(places => console.log(places.gsx$popular.$t))
+
           return (
             <div id="popular">
             <h2 className="centered">Most popular places in Norway</h2>
             <div className="itemWrapper">
-              {items.map(item => (
+              {items.slice(0, 8).map(item => (
                 <div className="item">
                 <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
                 <img src={item.gsx$img.$t} alt={item.gsx$name.$t}/>
@@ -55,10 +62,8 @@ componentDidMount() {
             </div>
             </div>
             );
-          
-        }
       }
-}
+}}
     
 
 export default Norway

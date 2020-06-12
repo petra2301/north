@@ -1,6 +1,8 @@
 const tripList = "https://spreadsheets.google.com/feeds/list/1QkHElLnsc_h-KYviswr8ZAuOMT1-yi20rHKlRgZqeuM/od6/public/values?alt=json ";
 function loadJSON(link) {
-    fetch(tripList).then(e=>e.json()).then(data=>data.feed.entry.forEach(displayTrips));
+    fetch(tripList)
+    .then(e=>e.json())
+    .then(data=>data.feed.entry.forEach(displayTrips));
 }
 
 const template = document.querySelector("template").content;
