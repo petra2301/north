@@ -56,7 +56,7 @@ componentDidMount() {
                 <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
                 <img src={item.gsx$img.$t} alt={item.gsx$name.$t}/>
                 <h3>{item.gsx$name.$t}</h3>
-                <a href="#" className="greenBtn">Read more</a>
+                <a href={item.gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
                 </div>
               ))}
             </div>
