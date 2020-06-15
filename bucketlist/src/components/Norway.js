@@ -40,30 +40,43 @@ componentDidMount() {
           return <div><p className="centered">Loading...</p></div>;
         }
         else {
-          //if {(this.state.items[i].gsx$popular.$t === "yes" ){
-          //console.log(this.state.items[0].gsx$popular.$t);
-          //console.log(this.state.items);
+          let itemContainer = [];
+          for (let i = 0; i < this.state.items.length; i++) {            
+            if (this.state.items[i].gsx$popular.$t === "yes" ) {
+              let item = 
+                <div className="item">
+                  <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                  <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+                  <h3>{this.state.items[i].gsx$name.$t}</h3>
+                  <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+                </div>;
+              itemContainer.push(item);
+            }
+          }
+          if (itemContainer.length===0) {
+            itemContainer.push(<div>Ni items.</div>);
+          }
+          let wrapper = 
+            <div id="popular">
+              <h2 className="centered">Most popular places in Norway</h2>
+              <div className="itemWrapper">
+                {itemContainer}
+              </div>
+            </div>              
+            return wrapper;
+        }
+
+          //v{
+         // console.log(this.state.items[0].gsx$popular.$t);
+
+         // console.log(this.state.items);
 
           //this state items forEach --> check if popular is yes --> if yes --> return
           //this.state.items.forEach(places => console.log(places.gsx$popular.$t))
 
-          return (
-            <div id="popular">
-            <h2 className="centered">Most popular places in Norway</h2>
-            <div className="itemWrapper">
-              {items.slice(0, 8).map(item => (
-                <div className="item">
-                <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
-                <img src={item.gsx$img.$t} alt={item.gsx$name.$t}/>
-                <h3>{item.gsx$name.$t}</h3>
-                <a href={item.gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
-                </div>
-              ))}
-            </div>
-            </div>
-            );
+         // return null;
       }
-}}
+}
     
 
 export default Norway
