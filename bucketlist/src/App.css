@@ -459,6 +459,10 @@ footer .iconBox {
   margin: 50px auto;
 }
 
+/* error message */
+.itemWrapper > p {
+  grid-column: 1 / span 4;
+}
 .item {
   background: white;
   padding: 30px 20px;

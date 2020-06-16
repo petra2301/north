@@ -9,37 +9,272 @@ class Norway extends Component {
         items: []
     };
 
-    placesList = "https://spreadsheets.google.com/feeds/list/1Sc2_X6hUCPjU851rcHNCmJOh6JrrDnuTwlmBlCT-HhY/1/public/values?alt=json";
+    noSuggestionErrorMessage = "We don't have any suggestion for this. Try another activity, or get some inspiration from our premade trips.";
 
-    displayHikingHandler = () => {
-      console.log(this.state.items[0].gsx$hiking.$t)
-      let hikingContainer = [];
-      let hikeWrapper = 
-         <div>
-            <div className="itemWrapper">
-              {hikingContainer}
-           </div>
-          </div>;   
-      for (let i = 0; i < this.state.items.length; i++) {            
-            if (this.state.items[i].gsx$hiking.$t === "yes" ) {
-              let hike = 
-                <div className="item">
-                  <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
-                  <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
-                  <h3>{this.state.items[i].gsx$name.$t}</h3>
-                  <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
-                </div>;
-              hikingContainer.push(hike);
-            }
-          }
-          if (hikingContainer.length===0) {
-            hikingContainer.push(<div>No items.</div>);
-          }
-          ReactDOM.render(hikeWrapper, document.getElementById('suggestions'));
-          document.getElementById('hiking').classList.toggle('activityBtn-selected');
+displayHikingHandler = () => {
+  let hikingContainer = [];
+  let hikeWrapper = 
+     <div>
+        <div className="itemWrapper">
+          {hikingContainer}
+       </div>
+      </div>;   
+  for (let i = 0; i < this.state.items.length; i++) {            
+        if (this.state.items[i].gsx$hiking.$t === "yes" ) {
+          let hike = 
+            <div className="item">
+              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+              <h3>{this.state.items[i].gsx$name.$t}</h3>
+              <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+            </div>;
+          hikingContainer.push(hike);
+        }
+      }
+      if (hikingContainer.length===0) {
+        hikingContainer.push(<p className="centered">{this.noSuggestionErrorMessage}</p>);
+      }
+      ReactDOM.render(hikeWrapper, document.getElementById('suggestions'));
+        let otherButtons = document.querySelectorAll(".activityBtn");
 
-           
-  }
+        [].forEach.call(otherButtons, function(btn) {
+            btn.classList.remove("activityBtn-selected");
+        });
+
+      document.getElementById('hiking').classList.toggle('activityBtn-selected');      
+}
+
+displayCityHandler = () => {
+  let cityContainer = [];
+  let cityWrapper = 
+     <div>
+        <div className="itemWrapper">
+          {cityContainer}
+       </div>
+      </div>;   
+  for (let i = 0; i < this.state.items.length; i++) {            
+        if (this.state.items[i].gsx$city.$t === "yes" ) {
+          let city = 
+            <div className="item">
+              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+              <h3>{this.state.items[i].gsx$name.$t}</h3>
+              <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+            </div>;
+          cityContainer.push(city);
+        }
+      }
+      if (cityContainer.length===0) {
+        cityContainer.push(<p className="centered">{this.noSuggestionErrorMessage}</p>);
+      }
+      ReactDOM.render(cityWrapper, document.getElementById('suggestions'));
+        let otherButtons = document.querySelectorAll(".activityBtn");
+
+        [].forEach.call(otherButtons, function(btn) {
+            btn.classList.remove("activityBtn-selected");
+        });
+
+      document.getElementById('city').classList.toggle('activityBtn-selected');    
+}
+
+displayLandmarkHandler = () => {
+  let landmarkContainer = [];
+  let landmarkWrapper = 
+     <div>
+        <div className="itemWrapper">
+          {landmarkContainer}
+       </div>
+      </div>;   
+  for (let i = 0; i < this.state.items.length; i++) {            
+        if (this.state.items[i].gsx$landmark.$t === "yes" ) {
+          let landmark = 
+            <div className="item">
+              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+              <h3>{this.state.items[i].gsx$name.$t}</h3>
+              <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+            </div>;
+          landmarkContainer.push(landmark);
+        }
+      }
+      if (landmarkContainer.length===0) {
+        landmarkContainer.push(<p className="centered">{this.noSuggestionErrorMessage}</p>);
+      }
+      ReactDOM.render(landmarkWrapper, document.getElementById('suggestions'));
+        let otherButtons = document.querySelectorAll(".activityBtn");
+
+        [].forEach.call(otherButtons, function(btn) {
+            btn.classList.remove("activityBtn-selected");
+        });
+
+      document.getElementById('landmark').classList.toggle('activityBtn-selected');    
+}
+
+displayNorthernLightsHandler = () => {
+  let lightsContainer = [];
+  let lightsWrapper = 
+     <div>
+        <div className="itemWrapper">
+          {lightsContainer}
+       </div>
+      </div>;   
+  for (let i = 0; i < this.state.items.length; i++) {            
+        if (this.state.items[i].gsx$northernlights.$t === "yes" ) {
+          let light = 
+            <div className="item">
+              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+              <h3>{this.state.items[i].gsx$name.$t}</h3>
+              <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+            </div>;
+          lightsContainer.push(light);
+        }
+      }
+      if (lightsContainer.length===0) {
+        lightsContainer.push(<p className="centered">{this.noSuggestionErrorMessage}</p>);
+      }
+      ReactDOM.render(lightsWrapper, document.getElementById('suggestions'));
+        let otherButtons = document.querySelectorAll(".activityBtn");
+
+        [].forEach.call(otherButtons, function(btn) {
+            btn.classList.remove("activityBtn-selected");
+        });
+
+      document.getElementById('landmark').classList.toggle('activityBtn-selected');    
+}
+
+displayBeachHandler = () => {
+  let beachContainer = [];
+  let beachWrapper = 
+     <div>
+        <div className="itemWrapper">
+          {beachContainer}
+       </div>
+      </div>;   
+  for (let i = 0; i < this.state.items.length; i++) {            
+        if (this.state.items[i].gsx$beach.$t === "yes" ) {
+          let beach = 
+            <div className="item">
+              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+              <h3>{this.state.items[i].gsx$name.$t}</h3>
+              <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+            </div>;
+          beachContainer.push(beach);
+        }
+      }
+      if (beachContainer.length===0) {
+        beachContainer.push(<p className="centered">{this.noSuggestionErrorMessage}</p>);
+      }
+      ReactDOM.render(beachWrapper, document.getElementById('suggestions'));
+        let otherButtons = document.querySelectorAll(".activityBtn");
+
+        [].forEach.call(otherButtons, function(btn) {
+            btn.classList.remove("activityBtn-selected");
+        });
+
+      document.getElementById('beach').classList.toggle('activityBtn-selected');    
+}
+
+displayOthersHandler = () => {
+  let otherContainer = [];
+  let otherWrapper = 
+     <div>
+        <div className="itemWrapper">
+          {otherContainer}
+       </div>
+      </div>;   
+  for (let i = 0; i < this.state.items.length; i++) {            
+        if (this.state.items[i].gsx$other.$t === "yes" ) {
+          let other = 
+            <div className="item">
+              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+              <h3>{this.state.items[i].gsx$name.$t}</h3>
+              <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+            </div>;
+          otherContainer.push(other);
+        }
+      }
+      if (otherContainer.length===0) {
+        otherContainer.push(<p className="centered">{this.noSuggestionErrorMessage}</p>);
+      }
+      ReactDOM.render(otherWrapper, document.getElementById('suggestions'));
+        let otherButtons = document.querySelectorAll(".activityBtn");
+
+        [].forEach.call(otherButtons, function(btn) {
+            btn.classList.remove("activityBtn-selected");
+        });
+
+      document.getElementById('other').classList.toggle('activityBtn-selected');    
+}
+
+displaySummertripsHandler = () => {
+  let summertripsContainer = [];
+  let summertripsWrapper = 
+     <div>
+        <div className="itemWrapper">
+          {summertripsContainer}
+       </div>
+      </div>;   
+  for (let i = 0; i < this.state.items.length; i++) {            
+        if (this.state.items[i].gsx$summer.$t === "yes" ) {
+          let summertrip = 
+            <div className="item">
+              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+              <h3>{this.state.items[i].gsx$name.$t}</h3>
+              <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+            </div>;
+          summertripsContainer.push(summertrip);
+        }
+      }
+      if (summertripsContainer.length===0) {
+        summertripsContainer.push(<p className="centered">{this.noSuggestionErrorMessage}</p>);
+      }
+      ReactDOM.render(summertripsWrapper, document.getElementById('suggestions'));
+        let otherButtons = document.querySelectorAll(".activityBtn");
+
+        [].forEach.call(otherButtons, function(btn) {
+            btn.classList.remove("activityBtn-selected");
+        });
+
+      document.getElementById('summer').classList.toggle('activityBtn-selected');    
+}
+
+
+displayWintertripsHandler = () => {
+  let wintertripsContainer = [];
+  let wintertripsWrapper = 
+     <div>
+        <div className="itemWrapper">
+          {wintertripsContainer}
+       </div>
+      </div>;   
+  for (let i = 0; i < this.state.items.length; i++) {            
+        if (this.state.items[i].gsx$winter.$t === "yes" ) {
+          let wintertrip = 
+            <div className="item">
+              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
+              <h3>{this.state.items[i].gsx$name.$t}</h3>
+              <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
+            </div>;
+          wintertripsContainer.push(wintertrip);
+        }
+      }
+      if (wintertripsContainer.length===0) {
+        wintertripsContainer.push(<p className="centered">{this.noSuggestionErrorMessage}</p>);
+      }
+      ReactDOM.render(wintertripsWrapper, document.getElementById('suggestions'));
+        let otherButtons = document.querySelectorAll(".activityBtn");
+
+        [].forEach.call(otherButtons, function(btn) {
+            btn.classList.remove("activityBtn-selected");
+        });
+
+      document.getElementById('winter').classList.toggle('activityBtn-selected');    
+}
 
     componentDidMount() {
 
@@ -105,13 +340,13 @@ class Norway extends Component {
                 <p className="centered">Choose something you want to do or see, and we will suggest all the right places for it:</p>
                 <div className="itemWrapper">
                   <button className="activityBtn" id="hiking" onClick={this.displayHikingHandler}><i className="fas fa-hiking" aria-hidden="true"></i> Hiking</button>
-                  <button className="activityBtn"><i className="fas fa-city" aria-hidden="true"></i> City</button>
-                  <button className="activityBtn"><i className="fas fa-mountain" aria-hidden="true"></i> Landmark</button>
-                  <button className="activityBtn"><i className="fas fa-star" aria-hidden="true"></i> Northern lights</button>
-                  <button className="activityBtn"><i className="fas fa-umbrella-beach" aria-hidden="true"></i>Beaches</button>
-                  <button className="activityBtn"><i className="fas fa-fish" aria-hidden="true"></i> Other local specialties</button>
-                  <button className="activityBtn"><i className="fas fa-sun" aria-hidden="true"></i> Only summer trips</button>
-                  <button className="activityBtn"><i className="fas fa-snowflake" aria-hidden="true"></i> Only winter trips</button>
+                  <button className="activityBtn" id="city" onClick={this.displayCityHandler}><i className="fas fa-city" aria-hidden="true"></i> City</button>
+                  <button className="activityBtn" id="landmark" onClick={this.displayLandmarkHandler}><i className="fas fa-mountain" aria-hidden="true"></i> Landmark</button>
+                  <button className="activityBtn" id="northernlights" onClick={this.displayNorthernLightsHandler}><i className="fas fa-star" aria-hidden="true"></i> Northern lights</button>
+                  <button className="activityBtn" id="beach" onClick={this.displayBeachHandler}><i className="fas fa-umbrella-beach" aria-hidden="true"></i>Beaches</button>
+                  <button className="activityBtn" id="other" onClick={this.displayOthersHandler}><i className="fas fa-fish" aria-hidden="true"></i> Other local specialties</button>
+                  <button className="activityBtn" id="summer" onClick={this.displaySummertripsHandler}><i className="fas fa-sun" aria-hidden="true"></i> Only summer trips</button>
+                  <button className="activityBtn" id="winter" onClick={this.displayWintertripsHandler}><i className="fas fa-snowflake" aria-hidden="true"></i> Only winter trips</button>
                 </div>
                 <div id="suggestions"></div>
               </div>
