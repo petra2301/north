@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
+import Norway from './Norway';
 
-class Activityfilter extends Component {
+function Activityfilter() {
 
-    displayHikingHandler = () => {
-        //check the component above --> check fetched data --> if items.gsx$hiking.$t === yes --> display item
+    const displayHikingHandler = () => {
+        console.log(Norway.placesList)
     }
 
-render() {
+//render() {
     return(
-        <div>
+        <div id="activities">
         <h2 className="centered">Choose an activity</h2>
         <p className="centered">Choose something you want to do or see, and we will suggest all the right places for it:</p>
         <div className="itemWrapper">
-        <button className="activityBtn" onClick={this.displayHikingHandler}><i className="fas fa-hiking" aria-hidden="true"></i> Hiking</button>
+        <button className="activityBtn" onClick={displayHikingHandler}><i className="fas fa-hiking" aria-hidden="true"></i> Hiking</button>
         <button className="activityBtn"><i className="fas fa-city" aria-hidden="true"></i> City</button>
         <button className="activityBtn"><i className="fas fa-mountain" aria-hidden="true"></i> Landmark</button>
         <button className="activityBtn"><i className="fas fa-star" aria-hidden="true"></i> Northern lights</button>
@@ -23,7 +24,6 @@ render() {
         </div>
         </div>
     )
-}
 }
 
 export default Activityfilter

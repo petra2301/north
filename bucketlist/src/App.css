@@ -403,7 +403,7 @@ footer .iconBox {
   width: 100%;
 }
 
-.appWrapper > h2, #popular > h2:nth-child(1), #activities > div > h2:nth-child(1), #suggestions > h2:nth-child(1) {
+.appWrapper > h2, #activities > div > h2:nth-child(1), #suggestions > h2:nth-child(1) {
   margin-top: 150px;
 }
 
@@ -526,6 +526,10 @@ footer .iconBox {
 .activityBtn > .fas {
   font-size: 2em;
   margin: 0 15px 0 0;
+}
+
+.activityBtn-selected {
+  background-color: #3C957A;
 }
 
 .placeBtn {

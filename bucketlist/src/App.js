@@ -8,7 +8,6 @@ import ReactDOM from 'react-dom';
 import Apphero from './components/Apphero';
 import NavbarApp from './components/NavbarApp';
 import Norway from './components/Norway';
-import Activityfilter from './components/Activityfilter';
 
 class App extends Component {
 
@@ -23,7 +22,6 @@ class App extends Component {
 
     if (event.target.value === "norway"){
       ReactDOM.render(<Norway />, document.getElementById('popular'));
-      ReactDOM.render(<Activityfilter />, document.getElementById('activities'));
     }
   }
 
@@ -90,8 +88,6 @@ class App extends Component {
         <div id="popular">
           {//the selected country's popular places will be rendered here by an eventhandler
           }
-        </div>
-        <div id="activities">
         </div>
         <div id="suggestions">
            {//TO-DO: call the component that fetches the activities/places of the selected button
