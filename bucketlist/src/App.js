@@ -7,7 +7,14 @@ import ReactDOM from 'react-dom';
 
 import Apphero from './components/Apphero';
 import NavbarApp from './components/NavbarApp';
+import Denmark from './components/Denmark';
+import Faroeislands from './components/Faroeislands';
+import Finland from './components/Finland';
+import Iceland from './components/Iceland';
 import Norway from './components/Norway';
+import Scotland from './components/Scotland';
+import Sweden from './components/Sweden';
+import Bucketlist from './components/Bucketlist';
 
 class App extends Component {
 
@@ -20,8 +27,20 @@ class App extends Component {
       value: event.target.value
     })
 
-    if (event.target.value === "norway"){
+    if (event.target.value === "denmark"){
+      ReactDOM.render(<Denmark />, document.getElementById('popular'));
+    } else if (event.target.value === "faroeislands"){
+      ReactDOM.render(<Faroeislands />, document.getElementById('popular'));
+    } else if (event.target.value === "finland"){
+      ReactDOM.render(<Finland />, document.getElementById('popular'));
+    } else if (event.target.value === "iceland"){
+      ReactDOM.render(<Iceland />, document.getElementById('popular'));
+    } else if (event.target.value === "norway"){
       ReactDOM.render(<Norway />, document.getElementById('popular'));
+    } else if (event.target.value === "scotland"){
+      ReactDOM.render(<Scotland />, document.getElementById('popular'));
+    } else if (event.target.value === "sweden"){
+      ReactDOM.render(<Sweden />, document.getElementById('popular'));
     }
   }
 
@@ -30,43 +49,7 @@ class App extends Component {
   return (
     <div>
       <NavbarApp />
-      <div className="bucketlistWrapper closeBucketlist">
-        <h3 id="bucketlistTitle">Your bucketlist <i id="arrow" className="fas fa-angle-down onlyMobile" aria-hidden="true"></i></h3>
-        <div className="listItem">
-          <img src="img/trolltunga.png" alt="static placeholder place img"/>
-          <div>
-            <h4>Place name</h4>
-            <a href="#">Read more</a>
-          </div>
-          <i className="fas fa-trash-alt" aria-hidden="true"></i>
-        </div>
-        {//listItem can be a component that gets data with props? so like click on item, and hand down id and respective props to listitem component
-        }
-        <div className="listItem">
-          <img src="img/trolltunga.png" alt="static placeholder place img"/>
-          <div>
-            <h4>Place name</h4>
-            <a href="#">Read more</a>
-          </div>
-          <i className="fas fa-trash-alt" aria-hidden="true"></i>
-        </div>
-        <div className="listItem">
-          <img src="img/trolltunga.png" alt="static placeholder place img"/>
-          <div>
-            <h4>Place name</h4>
-            <a href="#">Read more</a>
-          </div>
-          <i className="fas fa-trash-alt" aria-hidden="true"></i>
-        </div>
-        <div className="listItem">
-          <img src="img/trolltunga.png" alt="static placeholder place img"/>
-          <div>
-            <h4>Place name</h4>
-            <a href="#">Read more</a>
-          </div>
-          <i className="fas fa-trash-alt" aria-hidden="true"></i>
-        </div>
-      </div>
+      <Bucketlist />
       <Apphero />
       <div className="appWrapper">
         <h2 className="centered">Choose a country:</h2>

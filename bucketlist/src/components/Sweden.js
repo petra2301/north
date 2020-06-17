@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Denmark extends Component {
+class Sweden extends Component {
 
     render() {         
             return (
@@ -13,4 +13,4 @@ class Denmark extends Component {
 
       }
    
-export default Denmark
+export default Sweden
