@@ -393,7 +393,7 @@ margin: 0;
       }
 
     .onlyMobile {
-        display: block;
+        display: inline-block;
     }
 
     #mobileMenuWrapper {      

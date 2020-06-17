@@ -36,7 +36,7 @@ class App extends Component {
     } else if (event.target.value === "iceland"){
       ReactDOM.render(<Iceland />, document.getElementById('popular'));
     } else if (event.target.value === "norway"){
-      ReactDOM.render(<Norway />, document.getElementById('popular'));
+      ReactDOM.render(<Norway ref={(Norway) => {window.Norway = Norway}}/>, document.getElementById('popular'));
     } else if (event.target.value === "scotland"){
       ReactDOM.render(<Scotland />, document.getElementById('popular'));
     } else if (event.target.value === "sweden"){
@@ -49,7 +49,7 @@ class App extends Component {
   return (
     <div>
       <NavbarApp />
-      <Bucketlist />
+      <Bucketlist ref={(bucket) => {window.bucket = bucket}}/>
       <Apphero />
       <div className="appWrapper">
         <h2 className="centered">Choose a country:</h2>
@@ -73,7 +73,7 @@ class App extends Component {
           }
         </div>
         <div id="suggestions">
-           {//TO-DO: call the component that fetches the activities/places of the selected button
+           {//the selected countries' filtered activities/places will be rendered here
         }
         </div>
        <h2 className="centered">Can't find the right place? :(</h2>

@@ -19,11 +19,18 @@ displayHikingHandler = () => {
           {hikingContainer}
        </div>
       </div>;   
-  for (let i = 0; i < this.state.items.length; i++) {            
+  for (let i = 0; i < this.state.items.length; i++) {
+    let data = {
+      "id": `no-${i}`,
+      "img": this.state.items[i].gsx$img.$t,
+      "imgalt": this.state.items[i].gsx$name.$t,
+      "placeName": this.state.items[i].gsx$name.$t,
+      "readMore": this.state.items[i].gsx$link.$t
+    }             
         if (this.state.items[i].gsx$hiking.$t === "yes" ) {
           let hike = 
             <div className="item">
-              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <button className="addToListBtn" onClick={() => window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
               <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
               <h3>{this.state.items[i].gsx$name.$t}</h3>
               <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -52,11 +59,18 @@ displayCityHandler = () => {
           {cityContainer}
        </div>
       </div>;   
-  for (let i = 0; i < this.state.items.length; i++) {            
+  for (let i = 0; i < this.state.items.length; i++) {   
+    let data = {
+      "id": `no-${i}`,
+      "img": this.state.items[i].gsx$img.$t,
+      "imgalt": this.state.items[i].gsx$name.$t,
+      "placeName": this.state.items[i].gsx$name.$t,
+      "readMore": this.state.items[i].gsx$link.$t
+    }          
         if (this.state.items[i].gsx$city.$t === "yes" ) {
           let city = 
             <div className="item">
-              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <button className="addToListBtn" onClick={()=> window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
               <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
               <h3>{this.state.items[i].gsx$name.$t}</h3>
               <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -86,10 +100,17 @@ displayLandmarkHandler = () => {
        </div>
       </div>;   
   for (let i = 0; i < this.state.items.length; i++) {            
+    let data = {
+      "id": `no-${i}`,
+      "img": this.state.items[i].gsx$img.$t,
+      "imgalt": this.state.items[i].gsx$name.$t,
+      "placeName": this.state.items[i].gsx$name.$t,
+      "readMore": this.state.items[i].gsx$link.$t
+    } 
         if (this.state.items[i].gsx$landmark.$t === "yes" ) {
           let landmark = 
             <div className="item">
-              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <button className="addToListBtn"  onClick={()=> window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
               <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
               <h3>{this.state.items[i].gsx$name.$t}</h3>
               <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -118,11 +139,18 @@ displayNorthernLightsHandler = () => {
           {lightsContainer}
        </div>
       </div>;   
-  for (let i = 0; i < this.state.items.length; i++) {            
+  for (let i = 0; i < this.state.items.length; i++) {    
+    let data = {
+      "id": `no-${i}`,
+      "img": this.state.items[i].gsx$img.$t,
+      "imgalt": this.state.items[i].gsx$name.$t,
+      "placeName": this.state.items[i].gsx$name.$t,
+      "readMore": this.state.items[i].gsx$link.$t
+    }          
         if (this.state.items[i].gsx$northernlights.$t === "yes" ) {
           let light = 
             <div className="item">
-              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <button className="addToListBtn"  onClick={()=> window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
               <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
               <h3>{this.state.items[i].gsx$name.$t}</h3>
               <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -151,11 +179,18 @@ displayBeachHandler = () => {
           {beachContainer}
        </div>
       </div>;   
-  for (let i = 0; i < this.state.items.length; i++) {            
+  for (let i = 0; i < this.state.items.length; i++) {    
+    let data = {
+      "id": `no-${i}`,
+      "img": this.state.items[i].gsx$img.$t,
+      "imgalt": this.state.items[i].gsx$name.$t,
+      "placeName": this.state.items[i].gsx$name.$t,
+      "readMore": this.state.items[i].gsx$link.$t
+    }          
         if (this.state.items[i].gsx$beach.$t === "yes" ) {
           let beach = 
             <div className="item">
-              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <button className="addToListBtn" onClick={()=> window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
               <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
               <h3>{this.state.items[i].gsx$name.$t}</h3>
               <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -184,11 +219,18 @@ displayOthersHandler = () => {
           {otherContainer}
        </div>
       </div>;   
-  for (let i = 0; i < this.state.items.length; i++) {            
+  for (let i = 0; i < this.state.items.length; i++) {     
+    let data = {
+      "id": `no-${i}`,
+      "img": this.state.items[i].gsx$img.$t,
+      "imgalt": this.state.items[i].gsx$name.$t,
+      "placeName": this.state.items[i].gsx$name.$t,
+      "readMore": this.state.items[i].gsx$link.$t
+    }         
         if (this.state.items[i].gsx$other.$t === "yes" ) {
           let other = 
             <div className="item">
-              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <button className="addToListBtn" onClick={()=> window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
               <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
               <h3>{this.state.items[i].gsx$name.$t}</h3>
               <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -217,11 +259,18 @@ displaySummertripsHandler = () => {
           {summertripsContainer}
        </div>
       </div>;   
-  for (let i = 0; i < this.state.items.length; i++) {            
+  for (let i = 0; i < this.state.items.length; i++) { 
+        let data = {
+          "id": `no-${i}`,
+          "img": this.state.items[i].gsx$img.$t,
+          "imgalt": this.state.items[i].gsx$name.$t,
+          "placeName": this.state.items[i].gsx$name.$t,
+          "readMore": this.state.items[i].gsx$link.$t
+        }         
         if (this.state.items[i].gsx$summer.$t === "yes" ) {
           let summertrip = 
             <div className="item">
-              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <button className="addToListBtn" onClick={()=> window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
               <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
               <h3>{this.state.items[i].gsx$name.$t}</h3>
               <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -251,11 +300,18 @@ displayWintertripsHandler = () => {
           {wintertripsContainer}
        </div>
       </div>;   
-  for (let i = 0; i < this.state.items.length; i++) {            
+  for (let i = 0; i < this.state.items.length; i++) {  
+    let data = {
+      "id": `no-${i}`,
+      "img": this.state.items[i].gsx$img.$t,
+      "imgalt": this.state.items[i].gsx$name.$t,
+      "placeName": this.state.items[i].gsx$name.$t,
+      "readMore": this.state.items[i].gsx$link.$t
+    }            
         if (this.state.items[i].gsx$winter.$t === "yes" ) {
           let wintertrip = 
             <div className="item">
-              <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+              <button className="addToListBtn" onClick={()=> window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
               <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
               <h3>{this.state.items[i].gsx$name.$t}</h3>
               <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -281,24 +337,21 @@ displayWintertripsHandler = () => {
     fetch("https://spreadsheets.google.com/feeds/list/1Sc2_X6hUCPjU851rcHNCmJOh6JrrDnuTwlmBlCT-HhY/1/public/values?alt=json")
       .then(res => res.json())
       .then(
-        //data => console.log(data.feed.entry));}
         (data) => {
           this.setState({
             isLoaded: true,
             items: data.feed.entry
-          });
+          }, ()=> {window.bucket.reuseJSONData(this.state.items)});
         },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
         (error) => {
           this.setState({
             isLoaded: true,
             error
           });
-        }
+        },
       )
 }
+
 
     render() {
         const { error, isLoaded, items } = this.state;
@@ -310,11 +363,18 @@ displayWintertripsHandler = () => {
         }
         else {
           let itemContainer = [];
-          for (let i = 0; i < this.state.items.length; i++) {            
+          for (let i = 0; i < this.state.items.length; i++) {
+            let data = {
+              "id": `no-${i}`,
+              "img": this.state.items[i].gsx$img.$t,
+              "imgalt": this.state.items[i].gsx$name.$t,
+              "placeName": this.state.items[i].gsx$name.$t,
+              "readMore": this.state.items[i].gsx$link.$t
+            }            
             if (this.state.items[i].gsx$popular.$t === "yes" ) {
               let item = 
                 <div className="item">
-                  <button className="addToListBtn"><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
+                  <button className="addToListBtn" onClick={() => window.bucket.addDiv(data)}><i className="fas fa-plus-circle"></i>Add to my bucketlist</button>
                   <img src={this.state.items[i].gsx$img.$t} alt={this.state.items[i].gsx$name.$t}/>
                   <h3>{this.state.items[i].gsx$name.$t}</h3>
                   <a href={this.state.items[i].gsx$link.$t} target="_blank" className="greenBtn">Read more</a>
@@ -323,7 +383,7 @@ displayWintertripsHandler = () => {
             }
           }
           if (itemContainer.length===0) {
-            itemContainer.push(<div>Ni items.</div>);
+            itemContainer.push(<div>No items.</div>);
           }
           let wrapper = 
             <div>
