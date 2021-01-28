@@ -15,6 +15,7 @@
 
 /* --- colors --- */
 :root {
+    --light: #ffffff;
     --blue:#202431;
     --green: #3C957A;
     --lightgreen: #5bbd9f;
@@ -23,8 +24,18 @@
     --blueLiftedLight: #666971;
   }
   
+/* HTML elements */
+
 body {
     background-color: #202431;
+}
+
+button {
+    transition: .3s ease-in-out;
+}
+
+button:hover, .button:hover {
+    background-color: rgb(255 255 255 / 10%);
 }
 
 .menu {
@@ -187,6 +198,25 @@ a.greenBtn {
     width: 100%;
 }
 
+/* custom classes */
+
+.button {
+    padding: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.icon-white {
+    color: var(--light);
+}
+
+.icon-medium {
+    font-size: 2em;
+}
+
+.icon-large {
+    font-size: 3em;
+}
+
 /* --- FORMS --- */
 form {
     display: grid;
@@ -266,7 +296,7 @@ footer {
 }
 
 .overlappingFooter {
-    margin-top: -300px;
+    margin-top: -200px;
 }
 
 footer > div {
