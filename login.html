@@ -13,6 +13,30 @@
     <script src="https://kit.fontawesome.com/dce6b18441.js" crossorigin="anonymous"></script>
   </head>
   <body>
+
+    <script>
+        window.fbAsyncInit = function() {
+          FB.init({
+            appId      : '924322401668947',
+            cookie     : true,
+            xfbml      : true,
+            version    : 'v10.0'
+          });
+            
+          FB.AppEvents.logPageView();   
+            
+        };
+      
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "https://connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
+          
+
     <div id="mobileMenuWrapper">
       <img src="img/icons/menu.png" alt="mobile menu" id="openMobileMenu" class="mobileMenu" />
     </div>
@@ -73,6 +97,9 @@
       </div>
     </div>
     <div class="bodyWrapper">
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&autoLogAppEvents=1&version=v10.0&appId=1032727243919117" nonce="Ml8M2Umf"></script>
+<div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false"></div>
       <div class="divider"></div>
       <div class="contentWrapper">
         <h2 class="centered">About</h2>

@@ -1,0 +1,5 @@
+download externals
+import bootstrap and override what doesn't fit
+bootstrapify elements
+change common components to bootstrap
+change contact to instagram contact

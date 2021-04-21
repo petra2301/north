@@ -17,6 +17,17 @@ function closeMenu() {
   }
 
 
+const buttonWithIcon = document.querySelectorAll(".buttonWithIcon");
 
+for (let i = 0; i < buttonWithIcon.length; i++) {
+  buttonWithIcon[i].addEventListener("mouseover", function(e) {
+    buttonWithIcon[i].classList.add("buttonHovered")
+    //buttonWithIcon[i].classList.toggle("red");
+    });
 
-  
+    buttonWithIcon[i].addEventListener("mouseleave", function(e) {
+      buttonWithIcon[i].classList.remove("buttonHovered")
+      //buttonWithIcon[i].classList.toggle("red");
+      });
+
+}
